@@ -10,5 +10,9 @@ export const styles = StyleSheet.create({
     height: 120,
     marginTop: 90,
     marginBottom: 48
+  },
+  contentList: {
+    paddingLeft: 80,
+    paddingRight: 64,
   }
 });
