@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "prisma": "^4.4.0"
+  }
+}
