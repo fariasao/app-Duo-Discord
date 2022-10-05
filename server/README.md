@@ -12,7 +12,7 @@ bannerUrl
 ### Ad
 
 id
-bameId
+gameId
 name
 yearsPlaying
 discord
