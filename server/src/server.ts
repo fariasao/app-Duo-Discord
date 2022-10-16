@@ -7,12 +7,18 @@ import { convertMinutesToHourString } from './utils/convert-minutes-to-hour';
 const app = express();
 
 app.use(express.json());
-app.use(cors())
+app.use(cors(
+  // {
+  // Origin -> Endereço que pode acessar a aplicação
+  // origin: 'http://localhost:3000'
+  // }
+))
 
 const prisma = new PrismaClient({
   log: ['query']
 });
 
+// List Games
 app.get('/games', async (req, res) => {
   const games = await prisma.game.findMany({
     include: {
@@ -27,12 +33,14 @@ app.get('/games', async (req, res) => {
   return res.status(200).json(games)
 });
 
+// List Ads
 app.get('/ads', async (req, res) => {
   const ads = await prisma.ad.findMany()
 
   return res.status(200).json(ads)
 });
 
+// Create Ad
 app.post('/games/:id/ads', async (req, res) => {
   const gameId = req.params.id;
 
@@ -55,6 +63,7 @@ app.post('/games/:id/ads', async (req, res) => {
   return res.status(201).json(ad)
 });
 
+// Get Discor By Ad
 app.get('/ads/:id/discord', async (req, res) => {
   const adID = req.params.id;
 
@@ -72,6 +81,7 @@ app.get('/ads/:id/discord', async (req, res) => {
   });
 })
 
+// List Ads By Game
 app.get('/games/:id/ads', async (req, res) => {
   const gameId = req.params.id;
   
@@ -88,7 +98,7 @@ app.get('/games/:id/ads', async (req, res) => {
     where: {
       gameId
     },
-    orderBy: {  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${minutes}`
+    orderBy: {
       createdAt: 'desc'
     }
   })
