@@ -9,7 +9,8 @@ export const styles = StyleSheet.create({
   title: {
     color: THEME.COLORS.TEXT,
     fontsize: THEME.FONT_SIZE.LG,
-    fontFamily: THEME.FONT_FAMILY.BLACK
+    fontFamily: THEME.FONT_FAMILY.BLACK,
+    height: 25
   },
   subtitle: {
     color: THEME.COLORS.CAPTION_400,
