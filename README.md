@@ -1,7 +1,6 @@
 <h1>NLW eSports</h1>
 <h2>Apresentação</h2>
-<img src="https://github.com/antonioclc/NLW-eSports-Rocketseat/blob/main/mobile/assets/icon.png?raw=true">
-<p>App Full-Stack criando uma Plataforma de busca de parceiro(a) para jogar os games de sua escolha, publique um anúncio com suas informações ou busque um anúncio para encontrar seu duo!.</p>
+<p>App Full-Stack com mobile criando uma Plataforma de busca de parceiro(a) para jogar os games de sua escolha, publique um anúncio com suas informações ou busque um anúncio para encontrar seu duo!.</p>
 <p><strong>Desenvolvido por:</strong> Enzo Farias
 	<a  href="https://github.com/fariasao"  target="_blank"  		rel="noreferrer">(GitHub |
 	</a> 
